@@ -4,6 +4,8 @@ UNO Game Stats is a website that allows registered users to keep track of the sc
 
 It can replace a piece of paper that might get lost or damaged.
 
+For a video walkthrough, see: https://www.youtube.com/watch?v=Ci9zK9zRbSo
+
 # Built with
 
 Flask (https://www.palletsprojects.com/p/flask/)
