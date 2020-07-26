@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Restart
+{% endblock %}
+
+{% block main %}
+    <form action="/restart" method="post">
+        <div style="padding-bottom: 10px">
+            <h3 class="p-3 mb-2 bg-success text-white">
+                RESTART
+            </h3>
+        </div>
+        <p>
+            Are you sure you wish to restart the game? All current progress will be lost.
+        </p>
+        <div>
+            <button class="btn btn-primary" type="submit" name="no" value="No">No, go back</button>
+            <button class="btn btn-danger" type="submit" name="yes" value"Yes">Yes</button>
+        </div>
+    </form>
+{% endblock %}

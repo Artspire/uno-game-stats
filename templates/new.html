@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Game
+{% endblock %}
+
+{% block main %}
+    <form action="/new" method="post">
+        <div style="padding-bottom: 10px">
+            <h3 class="p-3 mb-2 bg-danger text-white">
+                START A NEW GAME
+            </h3>
+        </div>
+        <p>
+            UNO can be played with 2 to 10 players.
+        </p>
+        <p style= "color: red">
+            <b>UNO Game Stats is limited to a maximum of 4 players.</b>
+        </p>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1"></label>
+            <select class="form-control" id="exampleFormControlSelect1" type="number">
+                <option disabled selected value="">Number of players</option>
+                <!-- <option>2</option>
+                <option>3</option> /-->
+                <option>4</option>
+                <!-- option disabled value="">5</option>
+                <option disabled value="">6</option>
+                <option disabled value="">7</option>
+                <option disabled value="">8</option>
+                <option disabled value="">9</option>
+                <option disabled value="">10</option> /-->
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Next</button>
+    </form>
+{% endblock %}

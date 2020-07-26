@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update
+{% endblock %}
+
+{% block main %}
+    <form action="/update" method="post">
+        <div style="padding-bottom: 10px">
+            <h3 class="p-3 mb-2 bg-warning text-dark">
+                UPDATE SCORES
+            </h3>
+        </div>
+        <p>
+            Update scores for each player. Enter "0" if no points scored.
+        </p>
+        {% for player in players %}
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="score1" placeholder="Score ({{ player.player1 }})" type="number">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="score2" placeholder="Score ({{ player.player2 }})" type="number">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="score3" placeholder="Score ({{ player.player3 }})" type="number">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="score4" placeholder="Score ({{ player.player4 }})" type="number">
+        </div>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit" name="update" value="Update">Update</button>
+    </form>
+{% endblock %}

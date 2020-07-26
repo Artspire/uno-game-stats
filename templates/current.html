@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Current Game
+{% endblock %}
+
+{% block main %}
+    <form action="/current" method="post">
+        <h3 class="p-3 mb-2 bg-primary text-white">
+            CURRENT GAME
+        </h3>
+        <table class="table table-hover" style="table-layout: fixed">
+            <tr class="thead-dark">
+            {% for player in players %}
+                <th>{{ player.player1 }}</th>
+                <th>{{ player.player2 }}</th>
+                <th>{{ player.player3 }}</th>
+                <th>{{ player.player4 }}</th>
+            </tr>
+            {% endfor %}
+            <tr>
+            {% for score in scores %}
+                <td>{{ score.score1 }}</td>
+                <td>{{ score.score2 }}</td>
+                <td>{{ score.score3 }}</td>
+                <td>{{ score.score4 }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="table-secondary">
+            {% for total in totals %}
+                <td><b>{{ total.total1 }}</b></td>
+                <td><b>{{ total.total2 }}</b></td>
+                <td><b>{{ total.total3 }}</b></td>
+                <td><b>{{ total.total4 }}</b></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div>
+            <button class="btn btn-primary" type="submit" name="update" value="Update">Update scores</button>
+            <button class="btn btn-danger" type="submit" name="restart" value"Restart">Restart</button>
+        </div>
+    </form>
+{% endblock %}

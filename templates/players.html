@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Player Names
+{% endblock %}
+
+{% block main %}
+    <form action="/players" method="post">
+        <div style="padding-bottom: 10px">
+            <h3 class="p-3 mb-2 bg-danger text-white">
+                START A NEW GAME
+            </h3>
+        </div>
+        <p>
+            Enter name for each player.
+        </p>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="player1" placeholder="Name (player 1)" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="player2" placeholder="Name (player 2)" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="player3" placeholder="Name (player 3)" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="player4" placeholder="Name (player 4)" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Start game</button>
+    </form>
+{% endblock %}
