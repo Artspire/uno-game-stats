@@ -70,8 +70,6 @@ At the moment, UNO Game Stats is limited to a maximum of 4 players.
 
 In a future update, I would like to add the ability to first select the number of players from a range (between 2 and 10) and then keep track of only the selected number (without having to add dummy players, for instance).
 
-Unfortunately, I don't know yet how to implement that kind of functionality.
-
 # References
 
 Official UNO website (https://www.mattelgames.com/en-us/cards/uno?utm_source=mattel.com)
